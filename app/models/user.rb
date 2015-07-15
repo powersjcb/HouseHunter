@@ -17,4 +17,7 @@ class User < ActiveRecord::Base
   validates :name, length: { minimum: 2 }
   validates :income, :monthly_debts, :other_expenses,
     numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
+  has_many :watchings
+  has_many :watched_houses, through: :watchings, source: :house
 end

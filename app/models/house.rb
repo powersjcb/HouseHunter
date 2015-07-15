@@ -15,4 +15,7 @@ class House < ActiveRecord::Base
   validates :description, :address, :price, presence: true
   validates :price, numericality:
     { only_integer: true, greater_than_or_equal_to: 0 }
+
+  has_many :watchings
+  has_many :watching_users, through: :watchings, source: :user
 end
