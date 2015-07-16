@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <h3>Household finances</h3>
+    <form class="" action="index.html" method="post">
+      <label for="input-group">Yearly Income</label>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="slider" id="income-slider"></div>
+        </div>
+        <div class="col-xs-4">
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input id="income-input" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <label for="input-group">Monthly debt payments</label>
+
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="slider" id="debt-slider"></div>
+        </div>
+        <div class="col-xs-4">
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input id="debt-input" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <label for="input-group">Down payment</label>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="slider" id="downpayment-slider"></div>
+        </div>
+        <div class="col-xs-4">
+          <div class="input-group">
+            <input id="downpayment-input" type="text" class="form-control" aria-label="% of home value">
+            <span class="input-group-addon">%</span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-xs-12 col-md-6">
+    <h3>Results</h3>
+
+    <div class="row">
+      <div class="col-xs-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>You can afford</h4>
+          </div>
+          <div class="panel-body">$<span id='house-value'></span></div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Monthly payments</h4>
+          </div>
+          <div class="panel-body">$<span id="monthly-payment"></span></div>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <span class="glyphicon glyphicon-home house"></span>
+      </div>
+    </div>
+  </div>
+</div>
