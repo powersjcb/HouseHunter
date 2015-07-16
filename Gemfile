@@ -12,6 +12,9 @@ gem 'puma'
 gem 'rails_12factor'
 gem 'backbone-on-rails'
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'figaro'
+gem 'faker'
+gem 'rubillow'
 
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -22,7 +25,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'faker'
   gem 'annotate'
   gem 'bullet'
   gem 'better_errors'
