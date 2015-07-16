@@ -5,7 +5,7 @@ window.HouseHunter = {
   Routers: {},
 
   initialize: function () {
-    window.router = new HouseHunter.Router({
+    window.router = new HouseHunter.Routers.Router({
       $rootEl: $('#content')
     });
     Backbone.history.start();

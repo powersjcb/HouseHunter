@@ -17,6 +17,11 @@ class Api::UsersController < Api::ApiController
     render json: { user: @user, watched_houses: @user.watched_houses }
   end
 
+  def index
+    @users = User.all
+    render json: @users
+  end
+
   private
   def user_params
     params
