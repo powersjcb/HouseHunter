@@ -15,6 +15,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'figaro'
 gem 'faker'
 gem 'rubillow'
+gem 'httparty'
 
 # gem 'bcrypt', '~> 3.1.7'
 
