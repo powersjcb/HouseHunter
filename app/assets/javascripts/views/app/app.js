@@ -7,8 +7,6 @@ HouseHunter.Views.AppView = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.users = options.users;
-    // TODO: add user list subview
-    // this.listenToOnce(this.users, 'sync', this.addUsersIndex);
 
     var baseValue = {value: 0};
     this.incomeInput = baseValue;
@@ -16,11 +14,14 @@ HouseHunter.Views.AppView = Backbone.CompositeView.extend({
     this.downpaymentInput = baseValue;
   },
 
-  // TODO: create addUsersIndex dropdown
-
+  addUsersIndex: function () {
+    var subView = new HouseHunter.Views.UsersIndex({
+      collection: this.users
+    });
+    this.addSubview('#users-index', subView);
+  },
 
   addSliders: function () {
-
     // income slider
     this.incomeSlider = document.getElementById('income-slider');
     this.incomeInput = document.getElementById('income-input');
@@ -122,6 +123,7 @@ HouseHunter.Views.AppView = Backbone.CompositeView.extend({
 
   onRender: function () {
     this.addSliders();
+    this.addUsersIndex();
   },
 
   render: function () {
