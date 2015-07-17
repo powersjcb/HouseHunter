@@ -26,6 +26,6 @@ class Api::UsersController < Api::ApiController
   def user_params
     params
       .require(:user)
-      .permit(:name, :income, :monthly_debts,:other_expenses)
+      .permit(:name, :income, :monthly_debts,:downpayment)
   end
 end

@@ -35,6 +35,7 @@ HouseHunter.Views.AppView = Backbone.CompositeView.extend({
 
     this.incomeSlider.noUiSlider.on('update', function (values, handle) {
       this.incomeInput.value = Math.round(values[handle]);
+      this.zillowFetch();
     }.bind(this));
 
     this.incomeInput.addEventListener('change', function (event) {
@@ -89,19 +90,34 @@ HouseHunter.Views.AppView = Backbone.CompositeView.extend({
 
   zillowFetch: _.throttle(function () {
     $.ajax({
-      url: 'http://www.zillow.com/webservice/mortgage/CalculateAffordability.htm',
+      url: '/api/mortgage_proxy',
       data: {
         'zws-id': window.ZWSID,
         'annualincome': this.incomeInput.value,
         'monthlydebts': this.debtInput.value,
         'downpayment' : this.downpaymentInput.value
-      }
+      },
+      success: this.fillResults
     });
-  }, 250, this),
+  }, 200, this),
 
 
-  fillResults: function () {
+  fillResults: function (response) {
+    var result = response.affordabilitydetails.response;
+    var homeValue = result.affordabilityamount;
+    var totalMonthly = result.totalmonthlypayment;
 
+    if (homeValue > 0) {
+      $('#monthly-payment').text(totalMonthly);
+      $('#house-value').text(homeValue);
+      $('.monthly-payment').removeClass('alert alert-danger');
+      $('.house-value').removeClass('alert alert-danger');
+    } else {
+      $('#monthly-payment').text("Pay down debts, increase income");
+      $('#house-value').text("Pay down debts, increase income");
+      $('.monthly-payment').addClass('alert alert-danger');
+      $('.house-value').addClass('alert alert-danger');
+    }
   },
 
   onRender: function () {

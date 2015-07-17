@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mortgage-row">
   <div class="col-xs-12 col-md-6">
     <h3>Household finances</h3>
     <form class="" action="index.html" method="post">
@@ -60,13 +60,13 @@
           <div class="panel-heading">
             <h4>You can afford</h4>
           </div>
-          <div class="panel-body">$<span id='house-value'></span></div>
+          <div class="panel-body house-value">$<span class="house-value" id='house-value'></span></div>
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4>Monthly payments</h4>
+            <h4>Monthly payments*</h4>
           </div>
-          <div class="panel-body">$<span id="monthly-payment"></span></div>
+          <div class="panel-body monthly-payment">$<span id="monthly-payment"></span></div>
         </div>
       </div>
       <div class="col-xs-3">
@@ -74,4 +74,17 @@
       </div>
     </div>
   </div>
+
+  <footer class="col-xs-12 content">
+    <div class="row">
+      <div class="col-xs-4">
+        <div class="">
+          * Mortgage payments assume 30 yr loan term
+        </div>
+      </div>
+      <div class="col-xs-6">
+        Built using Rails, Backbone.js, and ZillowAPI through rails HTTP proxy
+      </div>
+    </div>
+  </footer>
 </div>
