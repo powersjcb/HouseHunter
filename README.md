@@ -1,4 +1,6 @@
 # Mortgage Affordability with Zillow API
+![Screenshot](http://res.cloudinary.com/slickapp-io/image/upload/v1437182687/Screen_Shot_2015-07-17_at_6.23.57_PM_mmzb2z.png)
+
 ### Features
 - Updates mortgage affordability using ajax requests to rails server on 250ms `setTimeout`
 - Used noUiSliders to add interactivity to the page
