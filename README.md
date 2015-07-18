@@ -1,7 +1,7 @@
 # Mortgage Affordability with Zillow API
 ### Features
-- Updates mortgage affordability using ajax requests to rails server on 250ms `setTimeout`.
-- Used noUiSliders to add interactivity to the page.
+- Updates mortgage affordability using ajax requests to rails server on 250ms `setTimeout`
+- Used noUiSliders to add interactivity to the page
 
 [Live Page](https://fringuante-choucroute-9465.herokuapp.com/)
 
