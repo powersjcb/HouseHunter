@@ -25,6 +25,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'rspec-rails'
   gem 'annotate'
   gem 'bullet'
   gem 'better_errors'
