@@ -3,7 +3,7 @@
 - Updates mortgage affordability using ajax requests to rails server on 250ms `setTimeout`.
 - Used noUiSliders to add interactivity to the page.
 
-[Live Page]()
+[Live Page](https://fringuante-choucroute-9465.herokuapp.com/)
 
 Backbone views and model could easily be extended to have users create/view houses and their affordability. (given some more time)
 
