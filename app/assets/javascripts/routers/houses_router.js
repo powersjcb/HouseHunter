@@ -15,7 +15,7 @@ HouseHunter.Routers.Router = Backbone.Router.extend({
     //   with zillow API
 
     var users = new HouseHunter.Collections.Users();
-    users.fetch();
+    // users.fetch();
     var appView = new HouseHunter.Views.AppView({
       users: users
     });

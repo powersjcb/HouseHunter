@@ -12,7 +12,6 @@ HouseHunter.Views.AppView = Backbone.CompositeView.extend({
     this.incomeInput = baseValue;
     this.debtInput = baseValue;
     this.downpaymentInput = baseValue;
-    console.log('init main view');
   },
 
   addUsersIndex: function () {
